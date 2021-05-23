@@ -1,6 +1,6 @@
 package:
   name: robotraconteur_companion
-  version: 0.1.1
+  version: 0.1.1.1
 
 source:
   git_url: https://github.com/robotraconteur/robotraconteur_companion.git
@@ -13,7 +13,7 @@ requirements:
     - cmake
     - boost-cpp
     - ninja # [win]
-    - make # [osx]
+    - make # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - yaml-cpp
