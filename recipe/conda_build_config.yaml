@@ -1,0 +1,4 @@
+channel_sources:
+  - robotraconteur,conda-forge,defaults
+channel_targets:
+  - robotraconteur main
