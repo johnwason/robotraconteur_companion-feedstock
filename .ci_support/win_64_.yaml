@@ -8,6 +8,8 @@ channel_targets:
 - robotraconteur main
 cxx_compiler:
 - vs2017
+openssl:
+- 1.1.1
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x

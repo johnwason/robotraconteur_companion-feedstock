@@ -18,14 +18,16 @@ requirements:
     - {{ compiler('cxx') }}
     - yaml-cpp
     - eigen
+    - openssl
   run:
     - boost-cpp
     - eigen
     - yaml-cpp
     - robotraconteur
+    - openssl
 
 build:
-  number: 3
+  number: 4
 
 about:
   home: http://robotraconteur.com
