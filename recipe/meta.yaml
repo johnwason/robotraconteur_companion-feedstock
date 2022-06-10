@@ -27,7 +27,7 @@ requirements:
     - openssl
 
 build:
-  number: 4
+  number: 6
 
 about:
   home: http://robotraconteur.com

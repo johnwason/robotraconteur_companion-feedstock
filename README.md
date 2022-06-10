@@ -33,16 +33,41 @@ conda config --add channels r
 conda config --set channel_priority strict
 ```
 
-Once the `r` channel has been enabled, `robotraconteur_companion` can be installed with:
+Once the `r` channel has been enabled, `robotraconteur_companion` can be installed with `conda`:
 
 ```
 conda install robotraconteur_companion
 ```
 
-It is possible to list all of the versions of `robotraconteur_companion` available on your platform with:
+or with `mamba`:
+
+```
+mamba install robotraconteur_companion
+```
+
+It is possible to list all of the versions of `robotraconteur_companion` available on your platform with `conda`:
 
 ```
 conda search robotraconteur_companion --channel r
+```
+
+or with `mamba`:
+
+```
+mamba search robotraconteur_companion --channel r
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search robotraconteur_companion --channel r
+
+# List packages depending on `robotraconteur_companion`:
+mamba repoquery whoneeds robotraconteur_companion --channel r
+
+# List dependencies of `robotraconteur_companion`:
+mamba repoquery depends robotraconteur_companion --channel r
 ```
 
 
