@@ -33,7 +33,7 @@ jobs:
             os: macos
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Build on Linux
       if: matrix.os == 'ubuntu'
@@ -85,11 +85,15 @@ jobs:
       shell: cmd
       run: |
         call activate base
-        mamba.exe install -c conda-forge 'python=3.9' conda-build conda pip boa conda-forge-ci-setup=3
+        mamba.exe install -c conda-forge 'python=3.9' conda-build conda pip boa conda-forge-ci-setup=3 "py-lief<0.12"
         if errorlevel 1 exit 1
         setup_conda_rc .\ ".\recipe" .\.ci_support\%CONFIG%.yaml
         if errorlevel 1 exit 1
         
+
+        if EXIST LICENSE.txt (
+          copy LICENSE.txt "recipe\\recipe-scripts-license.txt"
+        )
         conda.exe mambabuild "recipe" -m .ci_support\%CONFIG%.yaml
         if errorlevel 1 exit 1
         set "FEEDSTOCK_NAME=%GITHUB_REPOSITORY:*/=%"
@@ -146,7 +150,7 @@ jobs:
       continue-on-error: true
 
     - name: Store conda build artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: ${{ always() && steps.prepare-artifacts.outcome == 'success' }}
       with:
         name: ${{ steps.prepare-artifacts.outputs.BLD_ARTIFACT_NAME }}
@@ -155,7 +159,7 @@ jobs:
       continue-on-error: true
 
     - name: Store conda build environment artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: ${{ failure() && steps.prepare-artifacts.outcome == 'success' }}
       with:
         name: ${{ steps.prepare-artifacts.outputs.ENV_ARTIFACT_NAME }}
