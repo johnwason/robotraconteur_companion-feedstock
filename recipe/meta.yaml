@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/robotraconteur/robotraconteur_companion.git
-  git_depth: 1
+  git_rev: v0.2.0
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - openssl
 
 build:
-  number: 0
+  number: 1
 
 about:
   home: http://robotraconteur.com
