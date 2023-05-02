@@ -1,11 +1,11 @@
-About robotraconteur_companion
-==============================
+About robotraconteur_companion-feedstock
+========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/robotraconteur_companion-feedstock/blob/main/LICENSE.txt)
 
 Home: http://robotraconteur.com
 
 Package license: Apache 2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/robotraconteur_companion-feedstock/blob/master/LICENSE.txt)
 
 Summary: Companion library for the Robot Raconteur core library
 
