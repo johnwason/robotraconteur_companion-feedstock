@@ -5,9 +5,11 @@ Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/robotraconte
 
 Home: http://robotraconteur.com
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Summary: Companion library for the Robot Raconteur core library
+
+Development: https://github.com/robotraconteur/robotraconteur_companion
 
 Current build status
 ====================
@@ -98,4 +100,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@johnwason](https://github.com/johnwason/)
 
