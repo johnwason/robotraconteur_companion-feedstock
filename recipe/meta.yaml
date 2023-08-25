@@ -1,10 +1,16 @@
+{% set name = "robotraconteur_companion" %}
+{% set version = "0.2.0" %}
+
 package:
-  name: robotraconteur_companion
-  version: 0.2.0
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   git_url: https://github.com/robotraconteur/robotraconteur_companion.git
-  git_rev: v0.2.0
+  git_rev: v{{ version }}
+
+build:
+  number: 1
 
 requirements:
   host:
@@ -12,8 +18,8 @@ requirements:
     - git
     - cmake
     - boost-cpp
-    - ninja # [win]
-    - make # [linux]
+    - ninja  # [win]
+    - make  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - yaml-cpp
@@ -26,11 +32,18 @@ requirements:
     - robotraconteur
     - openssl
 
-build:
-  number: 1
+test:
+  commands:
+    - test -f ${PREFIX}/include/RobotRaconteurCompanion/StdRobDef/StdRobDefAll.h  # [not win]
+    - if exist %PREFIX%\\Library\\include\\RobotRaconteurCompanion\\StdRobDef\\StdRobDefAll.h (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://robotraconteur.com
-  license: Apache 2.0
+  dev_url: https://github.com/robotraconteur/robotraconteur_companion
+  license: Apache-2.0
+  license_file: LICENSE.txt
   summary: 'Companion library for the Robot Raconteur core library'
 
+extra:
+  recipe-maintainers:
+    - johnwason
