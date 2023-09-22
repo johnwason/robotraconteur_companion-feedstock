@@ -29,12 +29,14 @@ requirements:
     - yaml-cpp
     - eigen
     - openssl  # [unix]
+    - zlib # [unix]
   run:
     - boost-cpp
     - eigen
     - yaml-cpp
     - robotraconteur
     - openssl  # [unix]
+    - zlib # [unix]
 
 test:
   commands:
