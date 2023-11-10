@@ -23,19 +23,19 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-robotraconteur_companion-green.svg)](https://anaconda.org/r/robotraconteur_companion) | [![Conda Downloads](https://img.shields.io/conda/dn/r/robotraconteur_companion.svg)](https://anaconda.org/r/robotraconteur_companion) | [![Conda Version](https://img.shields.io/conda/vn/r/robotraconteur_companion.svg)](https://anaconda.org/r/robotraconteur_companion) | [![Conda Platforms](https://img.shields.io/conda/pn/r/robotraconteur_companion.svg)](https://anaconda.org/r/robotraconteur_companion) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-robotraconteur_companion-green.svg)](https://anaconda.org/robotraconteur/robotraconteur_companion) | [![Conda Downloads](https://img.shields.io/conda/dn/robotraconteur/robotraconteur_companion.svg)](https://anaconda.org/robotraconteur/robotraconteur_companion) | [![Conda Version](https://img.shields.io/conda/vn/robotraconteur/robotraconteur_companion.svg)](https://anaconda.org/robotraconteur/robotraconteur_companion) | [![Conda Platforms](https://img.shields.io/conda/pn/robotraconteur/robotraconteur_companion.svg)](https://anaconda.org/robotraconteur/robotraconteur_companion) |
 
 Installing robotraconteur_companion
 ===================================
 
-Installing `robotraconteur_companion` from the `r` channel can be achieved by adding `r` to your channels with:
+Installing `robotraconteur_companion` from the `robotraconteur` channel can be achieved by adding `robotraconteur` to your channels with:
 
 ```
-conda config --add channels r
+conda config --add channels robotraconteur
 conda config --set channel_priority strict
 ```
 
-Once the `r` channel has been enabled, `robotraconteur_companion` can be installed with `conda`:
+Once the `robotraconteur` channel has been enabled, `robotraconteur_companion` can be installed with `conda`:
 
 ```
 conda install robotraconteur_companion
@@ -50,26 +50,26 @@ mamba install robotraconteur_companion
 It is possible to list all of the versions of `robotraconteur_companion` available on your platform with `conda`:
 
 ```
-conda search robotraconteur_companion --channel r
+conda search robotraconteur_companion --channel robotraconteur
 ```
 
 or with `mamba`:
 
 ```
-mamba search robotraconteur_companion --channel r
+mamba search robotraconteur_companion --channel robotraconteur
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search robotraconteur_companion --channel r
+mamba repoquery search robotraconteur_companion --channel robotraconteur
 
 # List packages depending on `robotraconteur_companion`:
-mamba repoquery whoneeds robotraconteur_companion --channel r
+mamba repoquery whoneeds robotraconteur_companion --channel robotraconteur
 
 # List dependencies of `robotraconteur_companion`:
-mamba repoquery depends robotraconteur_companion --channel r
+mamba repoquery depends robotraconteur_companion --channel robotraconteur
 ```
 
 
@@ -83,8 +83,8 @@ package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
-`r` channel, whereupon the built conda packages will be available for
-everybody to install and use from the `r` channel.
+`robotraconteur` channel, whereupon the built conda packages will be available for
+everybody to install and use from the `robotraconteur` channel.
 Note that all branches in the robotraconteur/robotraconteur_companion-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
