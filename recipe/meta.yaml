@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/robotraconteur/robotraconteur_companion/archive/refs/tags/v0.3.1.tar.gz
+  - url: https://github.com/robotraconteur/robotraconteur_companion/archive/v{{ version }}.tar.gz
     sha256: cfcf199d1187b30fdd83b5e61e4113da6d819f61a032cfc4ccd5fa463c3d3ef1
   - url: https://github.com/robotraconteur/robotraconteur_standard_robdef/archive/refs/tags/group1-v1.tar.gz
     sha256: aad4f122b1240756564d6f3d16258e3fd07febad9e0ceda489c5e32290e64707
     folder: robdef
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
