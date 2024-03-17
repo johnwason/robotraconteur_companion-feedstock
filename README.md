@@ -1,7 +1,7 @@
 About robotraconteur_companion-feedstock
 ========================================
 
-Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/robotraconteur_companion-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/robotraconteur_companion-feedstock_channel-feedstock/blob/main/LICENSE.txt)
 
 Home: http://robotraconteur.com
 
