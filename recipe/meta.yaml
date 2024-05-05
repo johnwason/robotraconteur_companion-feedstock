@@ -27,6 +27,7 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - robotraconteur                         # [build_platform != target_platform]
   host:
     - robotraconteur
     - libboost-devel
