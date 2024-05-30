@@ -34,10 +34,12 @@ requirements:
     - yaml-cpp
     - eigen
     - openssl  # [unix]
+    - libopencv-headless
   run:
     - eigen
     - yaml-cpp
     - robotraconteur
+    - libopencv-headless
 
 test:
   commands:
